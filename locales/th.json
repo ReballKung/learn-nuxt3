@@ -1,0 +1,8 @@
+{
+    "hello": "สวัสดี",
+    "welcome": "ยินดีต้อนรับสู่ Nuxt 3",
+    "welcomeMessage": "สวัสดีครับ, {name}!",
+    "itemsCount": "{count} อัน | {count} อัน",
+    "date": "วันนี้วันที่ {date}"
+
+}

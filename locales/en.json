@@ -1,0 +1,7 @@
+{
+    "hello": "Hello",
+    "welcome": "Welcome to Nuxt 3",
+    "welcomeMessage": "Hello, {name}!",
+    "itemsCount": "{count} item | {count} items",
+    "date": "Today is {date}"
+}

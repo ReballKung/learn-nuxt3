@@ -14,13 +14,13 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   modules: [
+    '@nuxtjs/i18n',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-    //...
   ],
   vite: {
     vue: {
@@ -29,4 +29,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  i18n: {
+    vueI18n: './plugins/i18n.config.ts' // if you are using custom path, default
+  }
 })
