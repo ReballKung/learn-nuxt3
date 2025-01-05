@@ -9,7 +9,9 @@
         <!-- Content -->
         <main class="flex-grow p-4">
             <!-- Slot สำหรับแสดงเนื้อหาของแต่ละหน้า -->
-            <slot />
+            <NuxtErrorBoundary>
+                <slot />
+            </NuxtErrorBoundary>
         </main>
 
         <!-- Footer -->
