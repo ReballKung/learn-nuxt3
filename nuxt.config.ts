@@ -30,6 +30,15 @@ export default defineNuxtConfig({
     },
   },
   i18n: {
-    vueI18n: './plugins/i18n.config.ts' // if you are using custom path, default
-  }
+    vueI18n: './plugins/i18n.ts' // if you are using custom path, default
+  },
+  serverHandlers: [
+    { route: '/api/*', handler: '~/server/middleware/log.ts' },
+  ],
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseKey: process.env.SUPABASE_KEY,
+    },
+  },
 })

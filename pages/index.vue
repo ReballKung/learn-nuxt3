@@ -16,10 +16,21 @@
         <!-- การสลับภาษา -->
         <button @click="setLocale('en')">English</button>
         <button @click="setLocale('th')">ไทย</button>
+
+        <v-divider></v-divider>
+        <h1>API Test</h1>
+        <p>{{ message }}</p>
+
+
     </div>
 </template>
 
 <script setup>
 import newjeans from '@/assets/images/NJ_HowSweet_61.jpg'
 const { setLocale } = useI18n()
+
+const { data } = await useFetch('/api/hello')
+
+const message = data.value.message
+
 </script>
